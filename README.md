@@ -11,6 +11,15 @@ import { contrastRatio } from './contrast.mjs';
 console.log(contrastRatio('#000000', '#ffffff')); // 21
 ```
 
+### Command line
+
+```sh
+node cli.mjs '#000000' '#ffffff'
+# 21.00:1
+```
+
+Quote colors in the shell because `#` can start a comment. Invalid input prints a short error and exits with status 2. Successful calculations exit with status 0. Output is rounded to two decimals for display; the JavaScript API retains full precision.
+
 Run `npm test` for the test suite. No installation is needed.
 
 ## Scope
